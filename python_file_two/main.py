@@ -1,10 +1,17 @@
-print('Hey, how much money do your have?')
-amount = float(input('I have = '))
-cookie = float(input('Please, enter price for cookie here = '))
-candy = float(input('Please, enter price for candy here = '))
+from math import sqrt
+a = int(input('Type your first number here ->> '))
+b = int(input('Type your second number here ->> '))
+c = int(input('Type your third number here ->> '))
 
-totalPrice = cookie + candy
-if amount >= totalPrice:
-    print('Hey, u have enough money')
+d = b ** 2 - 4 * a * c
+print(d)
+
+if d >= 0:
+    print('Yes, it bigger')
+    x1 = (-b + sqrt(d)) / (2 * a)
+    x2 = (-b - sqrt(d)) / (2 * a)
+    print(x1)
+    print(x2)
+
 else:
-    print('Hey, not enough money in here!')
+    print('Not, it is not')
