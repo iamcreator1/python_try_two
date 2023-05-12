@@ -1,17 +1,22 @@
-from math import sqrt
-a = int(input('Type your first number here ->> '))
-b = int(input('Type your second number here ->> '))
-c = int(input('Type your third number here ->> '))
+import math
 
-d = b ** 2 - 4 * a * c
-print(d)
+print("Введите коэффициенты a, b и c для уравнения ax^2 + bx + c = 0:")
+a = float(input("a = "))
+b = float(input("b = "))
+c = float(input("c = "))
 
-if d >= 0:
-    print('Yes, it bigger')
-    x1 = (-b + sqrt(d)) / (2 * a)
-    x2 = (-b - sqrt(d)) / (2 * a)
-    print(x1)
-    print(x2)
+# Вычисляем дискриминант
+discriminant = b**2 - 4*a*c
 
+if discriminant > 0:
+    # Уравнение имеет два корня
+    x1 = (-b + math.sqrt(discriminant)) / (2*a)
+    x2 = (-b - math.sqrt(discriminant)) / (2*a)
+    print(f"Уравнение имеет два корня: x1 = {x1}, x2 = {x2}")
+elif discriminant == 0:
+    # Уравнение имеет один корень
+    x = -b / (2*a)
+    print(f"Уравнение имеет один корень: x = {x}")
 else:
-    print('Not, it is not')
+    # Уравнение не имеет действительных корней
+    print("Уравнение не имеет действительных корней")
