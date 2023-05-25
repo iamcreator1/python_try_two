@@ -4,7 +4,7 @@ user_sum = 0
 #3. В try я использую float тип данных, а в except - указываю 'sum' как стоп слово, скажем так
 
 while True:
-    user_input = input('Введите любое число\n-->>')
+    user_input = input('Введите любое число.(Введите sum для подсчета суммы введеных чисел)\n-->>')
     try:
         float_user_input = float(user_input)
         print(float_user_input)
